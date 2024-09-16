@@ -1,6 +1,10 @@
+
 const Button=(props)=>{
+    const btnClass = props.btnClass;
+    const opFunction = props.calculatorFunc;
+    const operator = props.operator;
 return(
-    <button className={props.btnClass}>{props.operator}</button>
+    <div className={btnClass} onClick={()=> opFunction(operator)}>{operator}</div>
 );
 }
 export default Button;
